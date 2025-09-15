@@ -3,9 +3,11 @@ SoftUni Back-End Course Exercise
 
 ##TODOs
 - [x] Initialize NodeJS Project
-- [ ] Dev Environment
-    - [] Dev Script
-    - [] Debugging- [x] Dev Environment
+- [x] Dev Environment
     - [x] Dev Script
     - [x] Debugging
-- [] Create basic HTTP Server
+- [x] Create basic HTTP Server
+- [x] Add resources
+- [x] Add home page
+- [x] Add css
+- [x] Add add-breed and add-cat pages
