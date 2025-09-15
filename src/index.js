@@ -2,21 +2,33 @@ import http from 'http';
 import fs from 'fs/promises';
 
 const server = http.createServer(async (req, res) => {
-    
+    let html;
 
     switch (req.url) {
         case '/': 
-            const homeHtml = await fileRead('./src/pages/home/index.html');
-            res.writeHead(200, {"content-type": "text/html"});
-            res.write(homeHtml);
+            html = await fileRead('./src/pages/home/index.html');
+            break;
+
+        case '/cats/add-breed':
+            html = await fileRead('./src/pages/addBreed.html');
+            break;
+        
+        case '/cats/add-cat':
+            html = await fileRead('./src/pages/addCat.html');
             break;
 
         case '/styles/site.css':
             const css = await fileRead('./src/styles/site.css');
             res.writeHead(200, {"content-type": "text/css"});
             res.write(css);
-            break
+            return res.end();
+        
+        default:
+            return res.end();
     }
+
+    res.writeHead(200, {"content-type": "text/html"});
+    res.write(html);
     
     res.end();
 })
