@@ -5,4 +5,7 @@ SoftUni Back-End Course Exercise
 - [x] Initialize NodeJS Project
 - [ ] Dev Environment
     - [] Dev Script
-    - [] Debugging
+    - [] Debugging- [x] Dev Environment
+    - [x] Dev Script
+    - [x] Debugging
+- [] Create basic HTTP Server
